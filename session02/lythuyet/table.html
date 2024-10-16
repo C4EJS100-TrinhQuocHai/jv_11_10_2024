@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <table bgcolor="violet" border="1" cellpadding="5" cellspacing="5">
+        <thead>
+            <!-- phần đầu của bảng! -->
+            <tr>
+                <td>Tên</td>
+                <td>Tuổi của bạn</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- phần thân! -->
+            <tr bgcolor="blue">
+                <td>Jill</td>
+                <th>50</th>
+            </tr>
+            <tr>
+                <td bgcolor="red">Eve</td>
+                <td align="right">94</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- phần chân bảng! -->
+        </tfoot>
+    </table>
+
+    <!--  tạo bảng có 4 hàng, mỗi hàng có  2 cột -->
+    <table border="1">
+
+        <tr>
+            <th>Tháng</th>
+            <th>Doanh Thu</th>
+            <th>Thưởng</th>
+        </tr>
+        <tr>
+            <td>Một</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Hai</td>
+            <td>$80</td>
+        </tr>
+        <tr>
+            <td colspan="3">$180</td>
+        </tr>
+    </table>
+    <p>*************</p>
+    <table border="1">
+
+        <tr>
+            <th>Tháng</th>
+            <th>Doanh Thu</th>
+            <th>Thưởng</th>
+        </tr>
+        <tr>
+            <td>Một</td>
+            <td rowspan="2">$100</td>
+        </tr>
+        <tr>
+            <td>Hai</td>
+
+        </tr>
+        <tr>
+            <td colspan="3">$180</td>
+        </tr>
+    </table>
+
+    <!-- các thẻ HTML5 bổ sung -->
+    <progress max="100" value="90"></progress>
+    <Audio controls>
+        <source src="./asset/NhacBaroqueGiupBanTapTrungHocTap2-V.A-3746468.mp3">
+    </Audio>
+    <!-- 
+    entity
+
+     -->
+    &copy;&reg;
+</body>
+
+</html>
