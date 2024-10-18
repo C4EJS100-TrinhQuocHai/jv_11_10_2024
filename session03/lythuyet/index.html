@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Form
+        Các thành phần trong form
+        + ô input: tạo ô cho người dùng nhập dữ liệu
+        + label thường kết hợp với form
+            + nếu giá trị thuộc tính for của thẻ label = giá trị thuộc tính id của input
+            thì khi click vào label nó sẽ focus vào ô input!
+        Các thuộc tính 
+            + name: tên của ô input
+            ==> sau này gửi dữ liệu lên server phải kèm thuộc tính name
+            có thể truy xuất 1 số giá trị (JavaScript)
+            + disable vô hiệu quá thẻ (input...)
+            + value: giá trị của ô nhập dữ liệu
+            + type :
+                text: nhập mọi giá trị
+                number: cho nhập số
+                password: khi nhập ẩn đi
+                email  : yêu cầu nhập phải có @.
+                radio : chọn 1 trong nhiều trường
+                checkbox: chọn nhiều
+                year : năm
+                date: thời gian
+        + required: bắt buộc phải nhập tên trường
+        + placeholder : gợi ý nhập
+                
+
+    -->
+    <form action="" name="" autocomplete="on">
+        <!-- <p>username</p> -->
+        <!-- <label for="">username: </label> -->
+        <!-- <span>username: </span> -->
+        <img src="" alt="">
+        <label for="test">username</label>
+        <input type="text" id="name" name="username" placeholder="mời nhập tên"> <br>
+        <label for="test">email</label>
+        <input type="text" id="email" name="username" required>
+        <br>
+        <button>đăng kí</button>
+        <img src="" id="image" alt="">
+        <p>type trong input</p>
+        <input type="text">
+        <input type="number">
+        <input type="password"> <br>
+        <input type="email"> <br>
+
+        <input name="gender1" type="radio"> <label for="">nam</label>
+        <input name="gender1" type="radio"> Nữ
+        <input type="radio" name="gender1"> Khác <br>
+
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JS
+        <input type="date"> <br>
+        <input type="month">
+        <input type="time">
+        <input type="color">
+        <input type="file"> <br>
+        <input type="range">
+        <select>
+            <option value="">HCM</option>
+            <option value="" selected>HN</option>
+            <option value="">ĐN</option>
+        </select>
+        <textarea name="" id="">
+        </textarea>
+        <button>click</button>
+        <!-- regex: -->
+    </form>
+</body>
+
+</html>
