@@ -1,0 +1,13 @@
+div {
+    background-color: tomato;
+}
+button{
+    border: none;
+    padding: 5px;
+    width: 80px;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+h3{
+    color: red;
+}
