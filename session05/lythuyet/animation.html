@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(red, violet, yellow);
+            animation-name: changeColor;
+            /* tên chuyển động */
+            animation-duration: 4s;
+            /* thời gian thực hiện hiệu ứng */
+            /* animation-delay: 5s; */
+            /* độ trễ  */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-image: linear-gradient(green, red, pink, rgb(233, 233, 206));
+                color: white;
+            }
+
+            25% {
+                background-image: linear-gradient(green, red, pink, rgb(233, 233, 206));
+
+                color: green
+            }
+
+            75% {
+                background-image: linear-gradient(rgb(4, 41, 26), rgb(0, 64, 201), pink, rgb(233, 233, 206));
+
+                background-color: violet;
+                color: black;
+            }
+
+            100% {
+                background-image: linear-gradient(rgb(17, 147, 223), rgb(241, 226, 9), rgb(206, 18, 49), rgb(233, 233, 206));
+
+                background-color: yellow;
+                color: red
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation">
+        <p>hello</p>
+    </div>
+</body>
+
+</html>
