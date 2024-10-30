@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .absolute {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .parent {
+            width: 300px;
+            height: 300px;
+            background-color: #dbdbdb;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            /* top: 0; */
+            right: 50px;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        đối với khối có position: absolute thì nó sẽ kiểm tra xem có ông cha 
+        nào chứa nó có thuộc tính position khác static thì sẽ lấy vị trí của
+        ông cha đấy làm gốc
+        ==> nếu không có thì sẽ lấy màn hình trình duyệt làm gốc.
+    -->
+    <div class="absolute">
+
+    </div>
+    <div class="parent">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+
+</html>

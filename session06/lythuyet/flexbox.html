@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            height: 300px;
+            background-color: #dbdbdb;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* 
+                justify-content: sẽ ăn theo trục : main-axis
+                align-item: sẽ ăn theo trục cross-axis
+             */
+            /* align-items: center; */
+        }
+
+        .item {
+            height: 50px;
+            background-color: red;
+            margin: 5px;
+            width: 250px;
+
+        }
+
+        .item1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .chirld1 {
+            background-color: violet;
+        }
+
+        .chirld2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    flex-box
+
+-->
+    <div class="container1">
+        <div class="item item1">
+            <div class="chirld1">11</div>
+            <div class="chirld2">22</div>
+        </div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+
+
+    </div>
+
+</body>
+
+</html>
