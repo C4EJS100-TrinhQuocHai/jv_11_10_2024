@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* code css */
+        /*  */
+    </style>
+</head>
+
+<body>
+    <!-- <button onclick="alert('xin chào!')"> click </button> -->
+    <!-- 
+        3 cách khai báo biến 
+        var
+        let
+        const 
+    -->
+    <script>
+        // var a;
+        // alert("học lập trình javascript!");
+        // 
+        const fullName = "Lê Minh Thu";
+        let check = true;
+        let checkIsNumber;
+        let name9 = "fff";
+        let class1 = "9A";
+        // khai báo 1 biến age để  lưu tuổi người dùng;
+        // let age;
+        // viết chương trình cho người dùng nhập vào 2 số a, b tính tổng 2 số đó.
+
+        /*
+            JS: 1995 var
+            const : ES6 2015
+            let   : ES6 2015
+        */
+        /*
+            var: có thể gán lại giá trị
+            có thể khai báo lại
+            có hoisting và truy cập được
+            khi khai báo không cần phải gán giá trị
+            phạm  vi truy cập function
+        */
+        /*
+            let: có thể gán lại giá trị
+            không thể khai báo lại
+            có hoisting và không truy cập được
+            khi khai báo không cần phải gán giá trị
+            phạm block-scope {}
+        */
+        /*
+            const: không thể gán lại giá trị
+            không thể khai báo lại
+            có hoisting và không truy cập được
+            khi khai báo phải gán giá trị
+            phạm block-scope {}
+            ******************
+            hoisting là gì? là cơ chế trong js nó sẽ đưa việc khai báo lên đầu.
+            JS: đọc code đọc từ trên xuống dưới, từ trái qua phải.
+            bug ở dòng nào dừng chương trình luôn và nó không chạy được
+         */
+
+        if (true) {
+            var number = 100;
+        }
+        console.log("giá trị number", number);
+
+    </script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>
