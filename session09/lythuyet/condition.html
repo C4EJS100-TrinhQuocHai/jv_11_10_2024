@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // câu điều kiện if
+        // cú pháp, luồng thực thi
+        let numberA = 5;
+        if (numberA > 5) {
+            // thân của if
+            // console.log(a);
+            // console.log("giá trị numberA lớn hơn 4");
+            // console.log(1);
+        }
+        // console.log("22222");
+        // falsy và truthy
+        /* 
+            falsy: 0, undefined, NaN, Null, flase, "", ''
+        */
+        if (1) {
+            // console.log("xin chào!");
+        }
+        if (true) {
+            console.log(" điều kiện thỏa mãn");
+        } else {
+            console.log("điều kiện không thỏa mãn!");
+        }
+        // cho người dùng nhập vào tuổi,  kiểm tra tuổi 
+        // là số chẵn hay lẻ.
+        let age = 4;
+        if (age % 2 == 0) {
+            // console.log("số bạn vừa nhập", age, "là số chẵn");
+        } else {
+            // console.log("là số lẻ");
+        }
+
+        if (age % 2 == 0) {
+            // console.log("số bạn vừa nhập", age, "là số chẵn");
+        }
+        if (age % 2 != 1) {
+            // console.log("là số lẻ");
+        }
+        let point = 8.5;
+        if (point > 8) {
+            if(point>9){
+                console.log("point lớn hơn 9");
+                if(point>11){
+                    if(point>15){
+                        console.log("3333");
+                    }else{
+                        console.log("2222");
+                        
+                    }
+                }
+            }
+           
+        } else if (point > 6.5) {
+            console.log("loại khá");
+            // hợp lý dừng luôn
+        } else if (point > 5) {
+            console.log("trung bình!");
+        }
+
+        console.log("xin chào!");
+
+        // viết chương trình cho người dùng nhập số ngày 2-7
+        // in ra thứ ngày đó.
+
+
+    </script>
+</body>
+
+</html>
