@@ -54,6 +54,48 @@
         students.splice(1, 1);
         console.log("giá trị mảng students: ", students);
 
+        /* 
+        
+            Cung cấp các phương thức nhanh làm việc với array
+            tầm 30 phương thức: 
+            - Cơ bản các em phải nắm chắc được vòng for
+         */
+
+        let numbers = [4, 6, 7, 9, 11];
+
+
+        // yêu cầu lấy ra các phần tử trong mảng numbers lớn hơn 8.
+        // [9,11]
+        let result = [];
+        for (let i = 0; i < numbers.length; i++) {
+            // lấy ra từng phần tử đi so sánh với 8
+            // nếu lớn hơn thì thầy push vào result
+            // numbers[i]
+            if (numbers[i] > 8) {
+                result.push(numbers[i]);
+            }
+        }
+        console.log("kết quả", result);
+
+        let emails = ["hoa@gmail.com", "thu@gmail.com", "lan@gmail.com", "phuong@gmail.com"];
+        // giả sử thầy có 1 cái mảng gồm các tài khoản email đăng kí
+        // cho người dùng nhập đăng kí 1 tài khoản mới
+        // nếu như tài khoản đó có rồi thì không được đăng kí
+        // nếu toàn khoản chưa có thì thêm vào.
+        let email = prompt("mời bạn nhập email");
+        for (let i = 0; i < emails.length; i++) {
+            if (emails[i] == email) {
+                console.log("tài khoản đã tồn tại!");
+                break;
+                // emails.push(email);
+            } else if (i == emails.length - 1) {
+                emails.push(email);
+                break;
+            }
+
+        }
+        console.log("kết quả", emails);
+
 
     </script>
 </body>

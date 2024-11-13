@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let emails = ["hoa@gmail.com", "thu@gmail.com", "lan@gmail.com", "phuong@gmail.com"];
+        let email = prompt("mời bạn nhập email");
+        // let checkItem = emails.includes(email);
+        // if (checkItem == true) {
+        //     console.log(" đã tồn tại tài khoản");
+        // } else {
+        //     console.log("tài khoản hợp lệ");
+        // }
+
+        if (emails.includes(email)) {
+            console.log(" đã tồn tại tài khoản");
+        } else {
+            console.log("tài khoản hợp lệ");
+        }
+        // indexOf, includes,
+        // indexOf phương thức, tìm kiếm phần tử
+        // ==> kết quả trả về vị trí phần tử
+        /* 
+           + nếu kết quả bằng -1 tức là không có phần tử
+           + nếu khác trừ 1 tức là có
+        */
+        /* 
+         includes: trả về true/ false
+        */
+        let numbers = [1, 9, 3, 2, 3, 4, 5];
+        // let findIndex = numbers.indexOf(3);
+        // if (findIndex != -1) {
+        //     // thêm vào
+        // } else {
+        //     // báo tài khoản đã tồn tại!
+        // }
+
+        // console.log(numbers.includes(8));
+
+
+    </script>
+</body>
+
+</html>

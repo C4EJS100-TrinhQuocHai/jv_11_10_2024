@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Viết chương trình khai báo mảng số nguyên bất kỳ,
+            in ra tất cả các phần tử xuất hiện từ hai lần trở lên trong mảng đã khai báo.
+        */
+        let numbers = [2, 3, 4, 1, 1, 8, 2, 4, 5, 6, 2, 8, 1];
+        //  [2,3,4];
+        // C1: for lồng xử lý
+        let result = [];
+        for (let i = 0; i < numbers.length; i++) {
+            let count = 0;
+            for (let j = 0; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
+                    count++;
+                }
+            }
+            if (count > 1) {
+                if (result.includes(numbers[i]) == false) {
+                    result.push(numbers[i]);
+                }
+            }
+        }
+        console.log("kết quả sau khi lọc", result);
+    </script>
+</body>
+
+</html>

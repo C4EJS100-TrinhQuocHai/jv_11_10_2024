@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        push, pop, shift, unshift, splice, slice, 
+        Khi làm việc với mảng thì có 2 hướng
+            + tương tác trực tiếp với mảng ban đầu
+            + mảng ban đầu vẫn giữ nguyên: nó sẽ tạo ra 1 mảng mới.
+        1. slice: sao chép, cắt ra 1 cái mảng mới
+        2. split : chuyển text thành array
+        3. toUpperCase(): phương thức chuyển thành chữ Hoa
+        4. toLowerCase():
+        5. join(): nối lại (nối các phần tử trong mảng thành chuỗi!)
+        6. reverse(đảo ngược)
+        7. sort ( sắp xếp )// function 
+        8. concat (gộp mảng)
+        9. indexOf 
+        10. includes
+        11. some ()
+        12. every ()
+        13. find ()
+        14. findIndex ()
+        15. filter ()
+        16. reduce ( tính toán)
+        17. map ()
+        18. forEach ()
+    -->
+    <script>
+        let number1 = [1, 2, 3];
+        let number2 = [4, 5, 6];
+        console.log("gộp mảng", number1.concat(number2));
+
+        let students = ["Minh", "Thu", "Nam", "Hồng", "An", "Phương"];
+        let numberArray = [1, 7, 2, 11111, 4, 9, 8];
+        console.log("sort", numberArray.sort());
+        // 1,11,2,4,7,8,9
+        // sắp xếp theo bảng mã ascii
+
+        let result = [];
+        // tính  từ Thu lấy ra 2 phần tử cho vào mảng result; 
+        console.log(students.slice(2, 4));
+        /*
+            cho đoạn text : xin chào việt nam!;
+            yêu cầu: viết hoa chữ cái đầu tiên!
+                    Xin Chào Việt Nam!;
+        */
+        // split
+        // let string = "hello";
+        // console.log(string.split("e"));
+        let text = "xin chào việt nam!";;
+        let convertStringToArray = text.split(" ");
+        // Xin
+        // let string = "xin";//Xinh
+        // console.log(string[0].toUpperCase() + string.slice(1));
+        // [xin, chào, việt, nam]
+        for (let i = 0; i < convertStringToArray.length; i++) {
+            convertStringToArray[i] = convertStringToArray[i][0].toUpperCase()
+                + convertStringToArray[i].slice(1);
+        }
+        console.log("convertStringToArray", convertStringToArray.join("_"));
+
+
+        let numbers = [2, 5, 7, 6, 7, 8, 4, 5, 6, 9];
+        // let sum = 0;
+        // for (let i = 0; i < numbers.length; i++) {
+        //     sum += numbers[i];
+        // }
+        // console.log("sum", sum);
+        let sum = numbers.reduce((acc, item) => {
+            return acc + item;
+        }, 0)
+        console.log("summmmmmmmmmmm", sum);
+
+
+        // mảng bất kì?
+        // lấy ra các phần tử lớn hơn 5
+        let resultFilter = numbers.filter((item) => item > 5);
+        console.log("kết quả lọc", resultFilter);
+
+
+        let a = [5]; // địa chỉ
+        let b = [5]; // địa chỉ 
+        // chia thành 2 nhóm
+        console.log("kết quả so sánh", a[0] == b[0]);
+
+        console.log(3 > 2 > 1);// false
+        console.log(1 < 2 < 3);// true
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
