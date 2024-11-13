@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+        Array : mảng : 
+        1. công dụng: 
+        2. cách khai báo
+            const, let, var tên Mảng = [];
+            let, const, var tên mảng = new Array();
+
+        3. quản lý mảng
+         CRUD 
+         C: Create
+            - thêm phần tử vào trong mảng
+                +  dùng phương thức (method)
+                + push : Thêm phần tử vào cuối mảng.
+                + unshift : thêm phần tử vào đầu mảng.
+                + splice  : 
+            - R: Read (in)
+                    for( thường).
+                    for( of ).
+            - U: Update cập nhật
+              + có thể dùng splice
+              + update theo vị trí
+            - D: Delete : xóa
+
+              + splice ( xóa theo vị trí )
+              + pop   ( xóa phần tử cuối)
+              + shift  ( xóa phần tử đầu tiên)
+         R: READ
+         U: Update
+         D: Delete
+        */
+        // quản lý sinh viên
+        // tạo 1 mảng để chứa các sinh viên lại
+        let students = ["Vân", "Hoa", "Anh"];
+        //             [ Vân, Duyên, Anh]
+        // thêm sinh viên Hoa vào trong danh sách lớp
+        // students.push("Hoa");
+        // students.push("Hùng");
+        // students.unshift("Vân");
+        // students.splice(1, 0, "Trang");
+        // students.splice(1, 1, "Duyên");
+        // students[0] = "Minh Thu";
+        students.splice(1, 1);
+        console.log("giá trị mảng students: ", students);
+
+
+    </script>
+</body>
+
+</html>
