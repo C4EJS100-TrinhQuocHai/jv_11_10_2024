@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tham số ( param) và đối số (argument ) trong hàm
+        /* 
+            tham số và đối số giúp hàm có khả năng tái sử dụng
+            khi gọi hàm truyền giá trị thì đó gọi là đối số.
+            phần khai báo trên hàm
+        */
+        function sayHello(a, b) {
+            console.log("xin chào", a, " năm nay", b, "tuổi");
+        }
+
+        sayHello("Hoa", 21);
+        // sayHello("Minh Thu");
+
+        /* 
+        Viết chương trình tính tổng 2 số a và b
+        */
+        function sum(numberA, numberB) {
+            console.log("tổng của 2 số là: ", numberA + numberB);
+        }
+        sum(7, 5);
+        sum(17, 15);
+
+        /* 
+            Viết chương trình cho người dùng đăng kí tài khoản email
+            với điều kiện email không được trùng
+        */
+        // tạo 1 mảng để chứa danh sách các email
+        let emails = [];
+        // viết function để kiểm tra email
+        function checkEmail(email) {
+            // 
+            let indexEmail = emails.indexOf(email);
+            if (indexEmail == -1) {
+                emails.push(email);
+                console.log("đăng kí thành công!");
+            } else {
+                console.log("tài khoản đã được đăng kí!");
+            }
+        }
+        checkEmail("hoa@gmail.com");
+        checkEmail("lan@gmail.com");
+        checkEmail("hoa@gmail.com");
+
+
+
+
+    </script>
+</body>
+
+</html>

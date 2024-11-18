@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arrRandom = ["minh", "hoa hồng nhung", "ngọc ánh", "minh phương", "minh thu", "thu trang"];
+        function findMaxLength(arr) {
+            let max = arr[0].length;
+            let index = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i].length) {
+                    max = arr[i].length
+                    index = i;
+                }
+            }
+            return index;
+        }
+        console.log(`phần tử cố độ dài lớn nhất: ${arrRandom[findMaxLength(arrRandom)]}`);
+
+
+    </script>
+</body>
+
+</html>

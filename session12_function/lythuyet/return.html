@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            return:
+                + dừng chương trình
+                + trả về kết quả cho hàm.
+        */
+        function kiemTraSoNguyenTo(number) {
+            let count = 0;
+            for (let i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    count++
+                }
+            }
+            if (count == 2) {
+                // là số nguyên tố
+                return true
+                // không viết code ở đây
+            } else {
+                // không phải số nguyên tố
+                return false
+            }
+        }
+        // viết chương trình in ra các số nguyên tố từ 15-1000;
+        function showPrime(a, b) {
+            for (let i = a; i <= b; i++) {
+                if (kiemTraSoNguyenTo(i) == true) {
+                    console.log(`${i} là số nguyên tố`);
+                }
+            }
+        }
+        showPrime(15, 1000);
+
+
+        function test(a) {
+            return 1000
+        }
+
+        console.log(1111111, test(1));
+
+    </script>
+</body>
+
+</html>

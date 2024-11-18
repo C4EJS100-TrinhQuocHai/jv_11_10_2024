@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            return trong hàm.
+                dừng việc thực thi trong hàm
+                trả về kết quả.
+            break: dừng thoát vòng lặp
+        */
+
+        /* 
+            giả  sử người dùng đi mua hàng
+            - khi thêm sản phẩm vào giỏ hàng
+            - kiểm tra xem sản phẩm đã có trong giỏ hàng hay chưa
+                + nếu có tăng số lượng
+                + nếu không có thêm bình thường
+         Vd: ô mô
+        */
+        // tạo hàm đi mua hàng
+        let carts = [["mì tôm", 3], ["nước xúc miệng", 2]];
+        function addToCart(product) {
+            // kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+            // nếu có tăng số lượng
+            // nếu chưa có thêm vào
+            let flag = -1;
+            for (let i = 0; i < carts.length; i++) {
+                if (carts[i][0] == product) {
+                    flag = i;// chính là vị trí của nó
+                    break;
+                }
+            }
+            // kết thúc for thì mình đi kiểm tra flag
+            if (flag == -1) {
+                // chứng tỏ không có sản phẩm trong giỏ hàng
+                carts.push([product, 1]);
+            }
+            else {
+                // có rồi, tăng số lượng
+                // khi tăng số lượng phải biết vị trí để tăng
+                carts[flag][1] = ++carts[flag][1];
+            }
+            console.log("kết quả", carts);
+        }
+        // addToCart("chinsu");
+        addToCart("ô mô");
+        // addToCart("mì tôm");
+
+
+    </script>
+</body>
+
+</html>
