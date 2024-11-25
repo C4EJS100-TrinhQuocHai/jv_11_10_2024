@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        object: là 1 kiểu dữ liệu phức tạp cho phép lưu trữ dữ liệu và quản lý
+        nhiều giá trị dưới dạng key(thuộc tính) và value(giá trị);
+        - thường để mô tả thực thể trong thế giới thực
+        VD: 1 đối tượng con mèo
+        gồm có các thuộc tính: màu mắt, màu lông, cân nặng
+        gôm các phương thức: chạy, bắt chuột...
+        VD: đối tượng cái xe ô tô
+        gồm có  các thuộc tính: màu sơn, năm sản xuất, hãng xe...
+        gồm có các phương thức: đua, di chuyển...
+        VD: đối tượng con người
+        gồm có các thuộc tính: tên, email, địa chỉ...
+        gồm các phương thức: chạy, nhảy, hát...
+
+        I-  Cách khởi tạo đối tượng
+            1. const,let, var tên_object={};
+            2. const,let, var new Object();
+            3. hàm tạo constructor
+            4. dùng class
+     -->
+    <script>
+        // VD:  khởi tạo đối tượng sinh viên
+        const student1 = {
+            name: "nguyễn văn a",// key và value|| thuộc tính và giá trị
+            age: 20,
+            address: "HN",
+            phone: "06522336666",
+        };
+        const student2 = {
+            name: "lê thị b",
+            age: 21,
+            address: "HCM",
+            phone: "8966333"
+        }
+        const cat = new Object();
+        cat.color = "black";
+        cat.weight = "500g";
+
+        console.log("con mèo", cat);
+        // hàm tạo constructor để tạo đối tượng
+        function Student(ten, tuoi, diachi, sdt) {
+            this.name = ten;
+            this.age = tuoi;
+            this.address = diachi;
+            this.phone = sdt;
+        }
+        let std1 = new Student("minh", 20, "Vĩnh Phúc", "88888");
+        console.log("sdt1", std1);
+        let sdt2 = new Student("hoa", 20, "HN", "999");
+
+        // dùng class
+        class Person {
+            constructor(name, age, address, phone) {
+                this.name = name;
+                this.age = age;
+                this.address = address;
+                this.phone = phone;
+            }
+        }
+        let person1 = new Person("lan", 20, "HN", "555");
+        console.log("person1", person1);
+        // nestjs, reactjs 
+
+    </script>
+</body>
+
+</html>

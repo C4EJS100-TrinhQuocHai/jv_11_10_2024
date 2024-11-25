@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // viết hàm sắp xếp sản phẩm theo giá từ bé đến lớn!
+        // sắp xếp theo tên
+
+        // function sapXep(arr){
+        // sort theo giá.
+        //     arr.sort((a,b)=>{
+        //         return a.price-b.price;
+        //     })
+        //     console.log(1111,arr);
+        // }
+        // sapXep(products)
+        function sapXep(arr) {
+            // sort theo tên
+            arr.sort((a, b) => {
+                if (a.name > b.name) {
+                    return 11;
+                } else if (a.name < b.name) {
+                    return -11;
+                } else {
+                    return 0;
+                }
+            })
+            console.log(1111, arr);
+
+
+        }
+        // sapXep(products);
+
+        let products = [
+            {
+                id: 1,
+                name: "iphone5",
+                price: 5000,
+            },
+            {
+                id: 2,
+                name: "iphone4",
+                price: 7000,
+            },
+            {
+                id: 3,
+                name: "iphone7",
+                price: 6000,
+            },
+            {
+                id: 4,
+                name: "iphone6",
+                price: 4000,
+            }
+        ]
+
+        for (let i = 0; i < products.length; i++) {
+            for (let j = 0; j < products.length - 1; j++) {
+                if (products[j].name > products[j + 1].name) {
+                    let temp = products[j];
+                    products[j] = products[j + 1];
+                    products[j + 1] = temp;
+                }
+            }
+        }
+        console.log(111111222, products);
+
+    </script>
+</body>
+
+</html>

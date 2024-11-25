@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // khai báo mảng gồm các quyển sách ( tên sách, tên tác giả);
+        // cho người dùng nhập tên tác giả sau đó in ra tên sách
+        // nếu không có in ra không có
+        let books=[
+            {
+                author:"Thạch Lam",
+                name:"gió lạnh đầu mùa"
+            },
+             {
+                author: "Kim Lân",
+                name: "vợ nhặt"
+            },
+             {
+                author: "Thạch Lam",
+                name: "hai đứa trẻ"
+            },
+             {
+                author: "Xuân Quỳnh",
+                name: "sóng"
+            },
+            {
+                author: "Xuân Quỳnh",
+                name: "thuyền và biển"
+            },
+        ]
+        let auth= prompt("mời  nhập tên tác giả cần tìm kiếm!");
+        let flag=true;
+        for(let i=0;i< books.length;i++){
+            if(books[i].author==auth){
+                flag=false;
+                console.log(`tác giả ${auth} có sách ${books[i].name}`); 
+            }
+        }
+        if(flag==true){
+            console.log("không có tác giả phù hợp!");
+        }
+    </script>
+</body>
+</html>

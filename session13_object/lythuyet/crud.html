@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // CRUD 
+        // khai báo đối tượng sinh viên;
+        // 1.C (Create-thêm thuộc tính cho đối tượng)
+        // TÊN ĐỐI TƯỢNG . THUỘC TÍNH = GIÁ TRỊ !
+        // 2.R (Read- đọc, in ra)
+        // 3.U (Update- cập nhật)
+        // 4.D (Delete- xóa)
+
+        let student = {
+            name: "Minh Thu",
+            name: "Minh Hà",
+            age: 25,
+        };
+        // student.name = "Minh Thu";
+        // student.age = 25;
+        // student.name;
+        // console.log(222222, student["name"]);
+
+        // for (const key in student) {
+        //     console.log("giá trị key", student[key]);
+        // }
+
+        // student.name = "Minh Huyền";
+        // xóa thuộc tính age;
+        // delete student.age;
+        console.log("student", student);
+
+        // clone object 
+        // tham chiếu tham trị
+        // primitive- kiểu nguyên thủy đơn giản
+        let a = 5;  // khai báo a
+        let b = a; // gán a cho b (GÁN GIÁ TRỊ)
+        a = 100;  // thay đổi a
+        console.log("bbb", b);
+        // kiểu phức tạp
+        const obj1 = {
+            name: "HN", // KHAI BÁO OBJ1
+        }
+        const obj2 = obj1 // gán ob1 cho obj2;// GÁN ĐỊA CHỈ
+        obj1.name = "HCM"; // thay đổi obj1;
+        console.log("obj2", obj2);
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
