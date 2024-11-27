@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title1 {
+            background-color: green;
+        }
+
+        .title2 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title1 title2"> hello </h1>
+
+    <!-- 
+        tương tác với attribute
+    -->
+        <button onclick="changeToggle()">click</button>
+    <script>
+        // đầu tiên phải lấy được element trước
+        let element = document.getElementsByTagName("h1")[0];
+
+        // element.className = "title2";
+        // classList: lấy ra danh sách tất cả các class có trong element
+        /*  
+            Trong classlist cung cấp các phương thức 
+                add: thêm class
+                remove: xóa class
+                togle: công tắc có thì xóa đi, không có thì thêm vào
+                contain: kiểm tra xem có class đấy chưa.
+         */
+        element.classList.add("title3");
+        element.classList.remove("title2");
+        function changeToggle(){
+            element.classList.toggle("title1");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> hello</h1>
+    <h1> test </h1>
+    <div class="" id="content">
+        nội dung thân
+    </div>
+    <p class="lorem">Lorem ipsum dolor sit amet.</p>
+    <img src="" alt="">
+    <script>
+        /* 
+              Các cách lấy element trong Dom 
+              1. lấy theo tên thẻ (tagname)
+              2. lấy theo class
+              3. lấy theo id 
+              4. lấy selector
+        */
+        let getElementByTagName = document.getElementsByTagName("h1");
+        // trả về 1HTML collection dạng mảng 
+        getElementByTagName[0].id = "title";
+
+        let getElementById = document.getElementById("content");
+        // console.log("1111", getElementById);
+        let getElementByClass = document.getElementsByClassName("lorem");
+        // trả về 1HTML collection dạng mảng
+        console.log("getElementByClass", getElementByClass[0]);
+
+
+
+        // console.log("elementByTagName", getElementByTagName[0]);
+        // let obj = {
+        //     name: "hoa"
+        // }
+        // // thêm thuộc tính age cho đối tượng obj
+        // obj.age = 25;
+    </script>
+</body>
+
+</html>

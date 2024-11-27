@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            tạo mảng  users là mảng trống:
+            Lấy thông tin từ người dùng để tạo đối tượng user gồm các 
+            thông tin sau: id,
+             user_name: không được để trống, không được ngắn hơn 3 kí tự
+             email  : không được để trống, email đúng định dạng
+             password: không được để trống, mật khẩu phải 8 kí tự
+        */
+        let users = []; // chứa danh sách tên người dùng.
+        // hàm đi kiểm tra username
+        function checkUserName(username) {
+            if (username.length <= 3) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+        // hàm đi kiểm tra định dạng email
+        function validateEmail(email) {
+            // Regular expression for email validation
+            var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            // Return true if email matches regex, false otherwise
+            return regex.test(email);
+        }
+        //   console.log(111111, validateEmail("hoa@gmail.com"));
+        // hàm kiểm tra password
+        function checkPassword(pass) {
+            if (pass.length < 8) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+        let username;
+        do {
+            username = prompt("mời bạn nhập tên lớn hơn 3 kí tự!");
+        } while (checkUserName(username) == 0);
+
+        let email;
+        do {
+            email = prompt("mời bạn nhập email của mình");
+        } while (validateEmail(email) == false);
+
+        let pass;
+        do {
+            pass = prompt("mời bạn nhập pass của mình");
+        } while (checkPassword(pass) == 0);
+        let user = {
+            id: Math.floor(Math.random() * 8888888),//uuid
+            username: username,
+            email: email,
+            password: pass,
+        }
+        users.push(user);
+        console.log("users", users);
+
+
+    </script>
+</body>
+
+</html>

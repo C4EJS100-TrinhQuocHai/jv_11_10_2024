@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <button onclick="changeColor()">click</button>
+    <a href=""></a>
+    <img src="" alt="">
+    <!--
+        DOM : document object model : mô hình tài liệu dạng đối tượng
+        khi mà trang web được tải lên trình duyệt sẽ tạo ra mô hình cây DOM
+        Công dụng với mô hình DOM mang lại
+        JS có thể thay đổi: 
+         - các thành phần HTML trong trang web
+         - các thuộc tính
+         - các kiểu CSS trong trang web
+         - có thể xóa các thành phần, thuộc tính trong HTML
+         - có thể thêm các thành phần HTML hoặc thuộc tính
+         - có thể tương tác, phản ứng với các  sự kiện 
+         - có thể tạo ra các sự kiện HTML mới trong trang web               
+        Các thành phần trong mô hình DOM
+        Gồm 4 thành phần chính
+        1. document gốc
+        2. Element thành phần(các thẻ tagname, h1,p, div....)
+        3. attribute (thuộc tính: class, id, )
+        4. text (nội dung)
+
+    -->
+    <script>
+        function changeColor() {
+            document.getElementsByTagName("h1")[0].innerHTML = "hello";
+
+        }
+    </script>
+</body>
+
+</html>

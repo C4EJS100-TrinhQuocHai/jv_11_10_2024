@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let users = [
+            {
+                id: "",
+                email: "a@gmail.com",
+                password: "",
+                username: "fdfdfdfdf"
+            },
+           
+        ];
+        let choose = +prompt("mời bạn nhập lựa chọn 1:.. 2... 3. quit");
+        while (choose != 3) {
+            choose = +prompt("mời bạn nhập lựa chọn 1:.. 2... 3. quit");
+            switch (choose) {
+                case 1:
+                    let email = prompt("moi nhap email");
+                    // tiến hành kiểm tra xem email đã tồn tại trong mảng users hay chưa
+                    let checkEmail = users.filter((item, index) => {
+                        return item.email == email;
+                    })
+                    if (checkEmail.length == 0) {
+                        // email chưa có trong mảng users, thêm bình thường.
+                        let user = {
+                            id: "",
+                            username: "",
+                            pass: "",
+                            email: email
+                        }
+                        users.push(user);
+                    } else {
+                        console.log("email đã tồn tại rồi!");
+                    }
+                    break;
+                case 2:
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        console.log(222222, users);
+
+
+    </script>
+</body>
+
+</html>
