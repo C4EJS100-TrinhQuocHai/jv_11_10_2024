@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="job" placeholder="nhập công việc">
+    <button id="btn" onclick="addJob()">add</button>
+    <ul id="jobs">
+    </ul>
+    <script>
+        let flag = -1;
+        // tạo 1 cái mảng để lưu thông tin công việc
+        let jobs = [];
+        // tạo function add công việc
+        function addJob() {
+            // lấy thông tin công việc
+            let valueJob = document.getElementById("job").value;
+            // tạo đối tượng công việc
+            let job = {
+                name: valueJob,
+                id: Math.floor(Math.random() * 9996668)
+            }
+            // kiểm tra flag
+            if (flag != -1) {
+                // chứng tỏ người ta muốn sửa
+                // lấy giá trị người dùng nhập
+                let newValue = document.getElementById("job").value;
+                for (let i = 0; i < jobs.length; i++) {
+                    if (jobs[i].id == flag) {
+                        jobs[i].name = newValue;
+                        renderJob();
+                        flag = -1;
+                        document.getElementById("btn").innerHTML = "add";
+                        document.getElementById("job").value = "";
+                        return;
+                    }
+                }
+            }
+            // đi thêm công việc vào mảng chứa danh sách công việc
+            jobs.push(job);
+            // console.log("jobs", jobs);
+            document.getElementById("job").value = "";
+            renderJob();
+        }
+        // tạo function đi hiển thị
+        function renderJob() {
+            let html = "";
+            for (let i = 0; i < jobs.length; i++) {
+                html += ` <li>
+                            ${jobs[i].name}
+                             <button onclick="deleteJob(${jobs[i].id})">xóa</button>
+                            <button onclick="editJob(${jobs[i].id})">sửa</button>
+                         </li>
+                        `
+            }
+            document.getElementById("jobs").innerHTML = html;
+        }
+        // tạo hàm xóa công việc
+        function deleteJob(id) {
+            for (let i = 0; i < jobs.length; i++) {
+                if (jobs[i].id == id) {
+                    jobs.splice(i, 1);
+                    renderJob();
+                }
+            }
+        }
+        // tạo hàm để sửa công việc
+        function editJob(id) {
+            // console.log("idUpdate", id);
+            // lấy thông tin công việc
+            // let jobUpdate = jobs.filter(item => item.id == id);
+            for (let i = 0; i < jobs.length; i++) {
+                if (jobs[i].id == id) {
+                    document.getElementById("job").value = jobs[i].name;
+                    flag = id;
+                }
+            }
+
+            document.getElementById("btn").innerHTML = "edit";
+        }
+    </script>
+</body>
+
+</html>
