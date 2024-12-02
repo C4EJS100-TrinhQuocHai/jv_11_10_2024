@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onmouseover="mouseOver()">click</button>
+    <button id="click2">click2</button> <br>
+    <label for="">username</label>
+    <input oninput="changeValue()" id="username" type="text"> <br>
+    <label for="">password</label>
+    <input id="password" type="text">
+    <button onclick="login()">login</button>
+    <script>
+        /* 
+            Có 2 cách dùng sự kiện
+            1. viết tên sự kiện trực tiếp trên thẻ HTML
+        */
+        // KHAI BÁO FUNCTION Sayhello
+        function mouseOver() {
+        // alert("xin chào!");
+            console.log("khi đưa con trỏ chuột vào phần tử thì ăn sự kiện");
+        }
+        // lấy element
+        let click2 = document.getElementById("click2");
+        click2.addEventListener("click", () => {
+            console.log("click vào btn click2");
+        })
+        // khai báo hàm đăng nhập
+        function login() {
+        // lấy element  ô input
+          console.log("đi gửi dữ liệu lên server");
+        }
+        // tạo function xử lý sự kiện khi người dùng nhập vào ô input
+        function changeValue() {
+            console.log("111", document.getElementById("username").value);
+        }
+        document.addEventListener("keydown", (event) => {
+            if (event.keyCode == 13) {
+                // tức là người dùng đang nhấn vào nút enter
+                console.log("tiến hành gửi dữ liệu lên server!");
+            }
+        })
+    </script>
+</body>
+
+</html>

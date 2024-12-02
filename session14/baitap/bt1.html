@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        
+    </ul>
+    
+    <script>
+        function createUlLi(){
+            let text="";
+            for (let i = 0; i < 3; i++) {
+                text+=`<li> List item number ${i+1}</li>`;
+            }
+            document.getElementById("ul").innerHTML=text;
+        }
+        createUlLi()
+    </script>
+</body>
+</html>
