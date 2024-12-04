@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .products {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 150px;
+            height: 220px;
+        }
+
+        .product div {
+            width: 50px;
+            height: 50px;
+        }
+
+        .product div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+        }
+
+        td img {
+            width: 100%;
+            height: 100%;
+        }
+        td {
+           text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dựng khung hiển thị -->
+    <h2>shoppee</h2>
+    <div class="container">
+        <div class="products">
+            <!-- danh sách sản phẩm mang đi bán -->
+          
+        </div>
+        <div class="cart">
+            <!-- giỏ hàng -->
+            giỏ hàng
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Ảnh</th>
+                        <th>giá</th>
+                        <th>số lượng</th>
+                        <th>thành tiền</th>
+                        <th>hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td  colspan="5">Tổng tiền </td>
+                    
+                        <td id="total" colspan="1">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script>
+       
+    </script>
+    <script src="./bt10.js"></script>
+</body>
+
+</html>
