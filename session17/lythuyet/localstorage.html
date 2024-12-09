@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Local storage : giúp lưu trữ dữ liệu trên trình duyệt và dữ liệu sẽ không 
+        bị mất đi khi f5, restart máy tính....
+        dung lượng : 5-10MB; 
+        1MB=1024KB;
+        localstorage cho phép lưu trữ dữ liệu dưới dạng key và value;
+        Key: tên dữ liệu
+        value: giá trị lưu
+        Cách lưu trữ dữ liệu:
+            Localstorage.setItem("key",value);
+        Cách lấy dữ liệu.
+            LocalStorage.getItem("tên_key");
+            
+    -->
+            <script>
+                // LƯU
+                // lưu dữ liệu là tên 1 người
+                // localStorage.setItem("name","hoa");
+                // lưu dữ liệu là tuổi của 1 người
+                // localStorage.setItem("age",20);
+                // lưu 1 mảng chứa danh sách sinh viên
+                let students=[
+                    {
+                        id:1,
+                        name:"thúy"
+                    },
+                    {
+                        id: 2,
+                        name: "hồng"
+                    },
+
+                ]
+
+                // khi lưu array phải chuyển sang định sạng JSON
+                // let convertStringJSON= JSON.stringify(students);
+                // localStorage.setItem("students",convertStringJSON);
+
+                //LẤY DỮ LIỆU VỀ
+                let name= localStorage.getItem("name");
+                console.log("giá trị name:",name);
+                let age = localStorage.getItem("age");
+                console.log("giá trị tuổi",age);
+                let  students1= JSON.parse(localStorage.getItem("students"));
+                console.log("student",students1);
+
+                // XÓA DỮ LIỆU
+                // localStorage.removeItem("tên_key");
+                // xóa từng key
+                // localStorage.removeItem("age");
+                // xóa hết:
+                // localStorage.clear();
+                // localStorage.clear();
+                
+
+            </script>
+</body>
+</html>

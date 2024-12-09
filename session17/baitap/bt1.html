@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+          
+        }
+        .main_image{
+            width: 800px;
+            height: 350px;
+            border: 1px solid tomato;
+            text-align: center;
+            margin: 0 auto;
+          
+        }
+        .main_image img{
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+        }
+        .cross_images{
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+           
+        }
+        .image_item{
+            width: 230px;
+            height: 150px;
+            border: 1px solid tomato;
+        }
+        .image_item img{
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main_image">
+            <!-- ảnh hiển thị chính -->
+            <img id="image" src="../../images/tao1.jpg" alt="">
+        </div>
+        <div class="cross_images">
+            <!-- danh sách ảnh con -->
+             <!-- <button><</button>
+            <div class="image_item">
+                <img src="../../images/tao1.jpg" alt="">
+            </div>
+            <div class="image_item">
+                <img src="../../images/tao2.jpg" alt="">
+            </div>
+            <div class="image_item">
+                <img src="../../images/tao3.jpg" alt="">
+            </div>
+            <div class="image_item">
+                <img src="../../images/tao4.jpg" alt="">
+            </div>
+            <button>></button> -->
+        </div>
+    </div>
+  
+    <script>
+        // tạo mảng chứa danh sách các ảnh là các quả táo
+        let apples=[
+            "../../images/tao1.jpg",
+            "../../images/tao2.jpg",
+            "../../images/tao3.jpg",
+            "../../images/tao4.jpg",
+            "../../images/tao5.jpg",
+            "../../images/tao6.jpg",
+        ]
+        // tạo hàm hiển thị ảnh
+        function showImage(){
+            let html="";
+            for (let i = 0; i < 4; i++) {
+             html+=
+                    `
+                    <div class="image_item">
+                        <img src="${apples[i]}" alt="">
+                    </div>
+                    `
+            }
+            document.getElementsByClassName("cross_images")[0].innerHTML=
+            `
+                 <button><</button>
+                    ${html}
+                 <button onclick= nextImage()>></button>
+            `
+        }
+        showImage();
+        // hàm click tăng ảnh lên
+        function nextImage(){
+            let item= apples.shift();
+            apples.push(item);
+            showImage();
+            showMainImage();
+        }
+        // hàm show ảnh chính
+        function showMainImage(){
+            document.getElementById("image").src=apples[0];
+        }
+    </script>
+</body>
+
+</html>
