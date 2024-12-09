@@ -35,6 +35,7 @@
             width: 230px;
             height: 150px;
             border: 1px solid tomato;
+           
         }
         .image_item img{
             width: 90%;
@@ -42,6 +43,10 @@
             object-fit: cover;
             border-radius: 5px;
         }
+        .opacity{
+            opacity: 0.3;
+        }
+        
     </style>
 </head>
 
@@ -81,15 +86,24 @@
             "../../images/tao6.jpg",
         ]
         // tạo hàm hiển thị ảnh
-        function showImage(){
+        function showImage(index){//2
             let html="";
             for (let i = 0; i < 4; i++) {
-             html+=
+                if(i==index){
+                    html+=
                     `
+                    <div class="image_item opacity">
+                        <img onclick=choseImage(${i}) src="${apples[i]}" alt="">
+                    </div> 
+                    `
+                }else{
+                    html +=
+                        `
                     <div class="image_item">
-                        <img src="${apples[i]}" alt="">
+                        <img  onclick=choseImage(${i}) src="${apples[i]}" alt="">
                     </div>
                     `
+                }
             }
             document.getElementsByClassName("cross_images")[0].innerHTML=
             `
@@ -98,18 +112,31 @@
                  <button onclick= nextImage()>></button>
             `
         }
-        showImage();
+        showImage(0);
         // hàm click tăng ảnh lên
         function nextImage(){
             let item= apples.shift();
             apples.push(item);
-            showImage();
-            showMainImage();
+            showImage(0);
+            showMainImage(0);
         }
         // hàm show ảnh chính
-        function showMainImage(){
-            document.getElementById("image").src=apples[0];
+        function showMainImage(index){
+            document.getElementById("image").src=apples[index];
         }
+        // hàm click  chọn ảnh
+        function choseImage(index){
+            clearInterval(awaitNext);
+            setInterval(() => {
+                nextImage();
+            }, 5000)
+            showMainImage(index);
+            showImage(index);//2
+        }
+        let awaitNext=setInterval(()=>{
+            nextImage();
+        },5000)
+       
     </script>
 </body>
 
