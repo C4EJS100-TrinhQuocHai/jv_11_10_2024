@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="email" name="" > <br>
+    <input id="pass" type="text"> <br>
+    <button onclick="loginAdmin()">login</button>
+    <script>
+     function loginAdmin() {
+
+            let email= document.getElementById("email").value;
+            let pass= document.getElementById("pass").value;
+        if(email=="admin@gmail.com"&& pass=="123456"){
+            location.href="./index.html";
+        }else{
+            alert("tên tk không đúng");
+        }
+
+     }
+    </script>
+</body>
+</html>

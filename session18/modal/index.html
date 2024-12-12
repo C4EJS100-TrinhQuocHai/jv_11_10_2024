@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .close{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .confirm{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal" style="display: none;">
+        <span class="close">X</span>
+        <p> bạn có chắn muốn xóa hay không?</p>
+        <div class="confirm">
+            <button>đồng ý</button>
+            <button onclick="cancelDelete()">hủy</button>
+        </div>
+       
+    </div>
+    <ul>
+        <li>
+            nguyễn văn a
+            <button class="btn" onclick="deleteItem()">xóa</button>
+         </li>
+    </ul>
+    <script>
+        function deleteItem(){
+            document.getElementsByClassName("modal")[0].style.display="block";
+        }
+        function cancelDelete(){
+            document.getElementsByClassName("modal")[0].style.display = "none";
+        }
+        let course=[
+            {   
+                maKhoaHoc:4,
+                name:"",
+                time:"",
+                status:true,
+            },
+            {
+                maKhoaHoc: 5,
+                name: "",
+                time: "",
+                status: true,
+            }
+        ];
+        let classRoom=[
+            {
+                maLop:16,
+                name:"",
+                coach:"",
+                description:"",
+                quantity:5,
+                status:true,
+                idMaKhoaHoc:4
+            },
+             {
+                maLop: 17,
+                name: "",
+                coach: "",
+                description: "",
+                quantity: 5,
+                status: true,
+                idMaKhoaHoc: 4
+            }
+        ];
+        let students=[
+            {
+                maSV:1,
+                name:"",
+                yearOfBirth:"",
+                address:"",
+                status:true,
+                idMaLopHoc:17.
+            }
+        ];
+        let account=[];
+
+    </script>
+</body>
+</html>
