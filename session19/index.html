@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="btn" onclick="chooseTab(0)">bảng điều khiển</a></li>
+        <li><a class="btn" onclick="chooseTab(1)">quản lý khóa học</a></li>
+        <li><a class="btn" onclick="chooseTab(2)">quản lý lớp học</a></li>
+        <li><a class="btn" onclick="chooseTab(3)">quản lý sinh viên</a></li>
+        <li><a class="btn" onclick="chooseTab(4)">quản lý tài khoản</a> </li>
+    </ul>
+    <div class="render">
+    </div>
+    <script>
+        function chooseTab(index){
+            let element= document.getElementsByClassName("btn");
+            for (let i = 0; i < element.length; i++) {
+                 if(i==index){
+                    element[i].classList.add("active");
+                 }else{
+                    element[i].classList.remove("active");
+                 }
+            }
+         let render= document.getElementsByClassName("render");
+          switch (index) {
+            case 0:
+                  render[0].innerHTML = "bảng điều khiển";
+                  break;
+            case 1:
+                  render[0].innerHTML =
+                  `
+                    <table border="1">
+                            <tr>
+                                <td>STT</td>
+                                <td>Mã khóa học</td>
+                                <td>Tên Khóa học</td>
+                                <td>Thời gian </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MS001</td>
+                                <td>Lập trình javascript</td>
+                                <td>150h</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>MS002</td>
+                                <td>Lập trình java</td>
+                                <td>130h</td>
+                            </tr>
+                    </table>
+                  `;
+                  break;
+            case 2:
+                  render[0].innerHTML = "quản lý lớp học";
+                  break;
+            case 3:
+                  render[0].innerHTML = "quản lý sinh viên";
+                  break;
+            case 4:
+                  render[0].innerHTML = "quản lý account ";
+                  break;
+          
+            default:
+                break;
+          }
+        }
+        chooseTab(1);
+    </script>
+</body>
+</html>
