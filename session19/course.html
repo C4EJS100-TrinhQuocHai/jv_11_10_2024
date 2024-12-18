@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="pages">
+       
+    </ul>
+    <table border="1" id="student">
+        
+    </table>
+    <script>
+        let arr=[
+            {
+                id:1,
+                name:"lan1"
+            },
+             {
+                id: 2,
+                name: "lan2"
+            },
+             {
+                id: 3,
+                name: "lan3"
+            },
+             {
+                id: 4,
+                name: "lan4"
+            },
+             {
+                id: 5,
+                name: "lan5"
+            },
+             {
+                id: 6,
+                name: "lan6"
+            },
+             {
+                id: 7,
+                name: "lan7"
+            },
+             {
+                id: 8,
+                name: "lan8"
+            }
+        ]
+
+        let itemPerPage=3; // số phần tử hiển thị trên 1 trang
+        let pages=  Math.ceil(arr.length / itemPerPage);
+        let start;
+        let end;
+        let currentPage=1; // trang hiện tại
+
+        function startEnd(currentPage) {
+                start=(currentPage-1)*itemPerPage;
+                end=currentPage*itemPerPage;
+        }
+        startEnd(1);
+        // function đi hiển thị tên người theo trang
+        function renderStudent() {
+            let html="";
+            for (let i = 0; i < arr.length; i++) {
+                if(i>=start && i<end){
+                     html += ` <tr>
+                            <td>${i + 1}</td>
+                            <td>${arr[i].name}</td>
+                        </tr>`
+                }
+            }
+            document.getElementById("student").innerHTML=html;
+        }
+        renderStudent();
+        //function tạo trang
+        function renderPage(){
+            let html= "";
+            for (let i = 0; i < pages; i++) {
+                html+=`
+                     <li> <button onClick= currentPageNow(${i+1})>${i+1}</button></li>
+                `
+            }
+            document.getElementById("pages").innerHTML=html;
+        }
+        renderPage();
+        // function tính toán trang hiện tại
+        function currentPageNow(current) {
+            currentPage=current;
+            startEnd(currentPage);
+            renderStudent();
+        }
+    </script>
+</body>
+</html>
